@@ -16,9 +16,23 @@ android {
     }
 }
 ```
-2. Create a ViewModel class
+2. Use the viewModel data in XML files -- right click on the root layout element and convert the file into a databinding layout
+![databinding-visual](./images/data-binding-conversion.png)
 
-3. Add binding to the activity/fragment
+
+Then add the variable as a data:
+```XML
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.cheers.CheersViewModel" />
+    </data>c
+```
+
+3. Create View Model class 
+* this is where you will store data that you bind to the views so that the data survives config changes
+
+4. Add binding to the activity/fragment
 ```kotlin
 class MainActivity : AppCompatActivity() {
 
@@ -35,15 +49,4 @@ class MainActivity : AppCompatActivity() {
     }
 }
 ```
-4. Use the viewModel data in XML files -- right click on the root layout element and convert the file into a databinding layout
-![databinding-visual](./images/data-binding-conversion.png)
-
-
-Then add the variable as a data:
-```XML
-    <data>
-        <variable
-            name="viewModel"
-            type="com.example.cheers.CheersViewModel" />
-    </data>c
-```
+4. 
