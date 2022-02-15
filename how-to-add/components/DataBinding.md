@@ -11,9 +11,9 @@ Two way binding that binds your layout files to UI layer components (Activity/Fr
 ```gradle
 android {
    ...
-   buildFeatures {
-       dataBinding = true
-   }
+    buildFeatures {
+        dataBinding true
+    }
 }
 ```
 2. Create a ViewModel class
@@ -35,4 +35,15 @@ class MainActivity : AppCompatActivity() {
     }
 }
 ```
-4. Use the viewModel data in XML files 
+4. Use the viewModel data in XML files -- right click on the root layout element and convert the file into a databinding layout
+![databinding-visual](./images/data-binding-conversion.png)
+
+
+Then add the variable as a data:
+```XML
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.cheers.CheersViewModel" />
+    </data>c
+```
