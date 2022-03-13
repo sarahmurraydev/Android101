@@ -26,7 +26,7 @@ Then add the variable as a data:
         <variable
             name="viewModel"
             type="com.example.cheers.CheersViewModel" />
-    </data>c
+    </data>
 ```
 
 3. Create View Model class 
